@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find luminous_description)/launch/spawn.launch" />
+
+
+    <node pkg="gmapping" type="slam_gmapping" name="gmapping_thing" output="screen" />
+
+    <!-- maxUrange-->
+    
+
+</launch>  

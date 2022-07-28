@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="kapsul_description" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:macro name="kapsul_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.12609 -1.5372E-05 -0.047"
+        rpy="0 0 0" />
+      <mass
+        value="4.1147" />
+      <inertia
+        ixx="0.044258"
+        ixy="1.4621E-07"
+        ixz="2.8094E-06"
+        iyy="0.036225"
+        iyz="8.4552E-08"
+        izz="0.076332" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="sag_on_teker">
+    <inertial>
+      <origin
+        xyz="-4.8556E-06 -0.042195 -2.1839E-06"
+        rpy="0 0 0" />
+      <mass
+        value="2.2613" />
+      <inertia
+        ixx="0.0097154"
+        ixy="6.1245E-08"
+        ixz="8.7582E-08"
+        iyy="0.017175"
+        iyz="-1.1865E-07"
+        izz="0.0097154" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sag_on_teker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sag_on_teker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sag_on_teker_joint"
+    type="continuous">
+    <origin
+      xyz="0.37276 -0.28 -0.33176"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sag_on_teker" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sol_on_teker">
+    <inertial>
+      <origin
+        xyz="-0.00411123530215457 -0.0421949230785583 0.00513634021298398"
+        rpy="0 0 0" />
+      <mass
+        value="2.26128319254704" />
+      <inertia
+        ixx="0.00971542127679644"
+        ixy="1.11406361569728E-08"
+        ixz="6.2784750580486E-08"
+        iyy="0.0171753371242513"
+        iyz="-1.32984697962742E-07"
+        izz="0.00971529851660281" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sol_on_teker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sol_on_teker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sol_on_teker_joint"
+    type="continuous">
+    <origin
+      xyz="0.37276 0.28 -0.33176"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sol_on_teker" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="sag_arka_teker">
+    <inertial>
+      <origin
+        xyz="-4.855E-06 -0.042195 -2.1832E-06"
+        rpy="0 0 0" />
+      <mass
+        value="2.2613" />
+      <inertia
+        ixx="0.0097154"
+        ixy="6.1245E-08"
+        ixz="8.758E-08"
+        iyy="0.017175"
+        iyz="-1.1865E-07"
+        izz="0.0097154" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sag_arka_teker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sag_arka_teker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sag_arka_teker_joint"
+    type="continuous">
+    <origin
+      xyz="-0.36683 -0.28 -0.33913"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sag_arka_teker" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sol_arka_teker">
+    <inertial>
+      <origin
+        xyz="-5.32542873177277E-06 -0.0421949233096479 -1.52785301299474E-07"
+        rpy="0 0 0" />
+      <mass
+        value="2.26128321466609" />
+      <inertia
+        ixx="0.00971542128350953"
+        ixy="1.11399804132337E-08"
+        ixz="6.2779127692539E-08"
+        iyy="0.0171753371215513"
+        iyz="-1.32984124407598E-07"
+        izz="0.00971529851114293" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sol_arka_teker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sol_arka_teker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sol_arka_teker_joint"
+    type="continuous">
+    <origin
+      xyz="-0.37097 0.28 -0.33401"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sol_arka_teker" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="imu">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 3.65270724036332E-18 0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.00100530964914873" />
+      <inertia
+        ixx="1.81793494887729E-08"
+        ixy="-5.12906334327379E-40"
+        ixz="1.33675033672866E-24"
+        iyy="1.81793494887729E-08"
+        iyz="1.15574586471652E-24"
+        izz="3.21699087727595E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/imu.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/imu.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.20396 0 -0.003239"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="laser">
+    <inertial>
+      <origin
+        xyz="-0.0295155699955214 -0.0172415775008674 0.00038425318843308"
+        rpy="1.57 0 0" />
+      <mass
+        value="0.172629444873041" />
+      <inertia
+        ixx="0.000173095990895718"
+        ixy="-5.569795083515E-05"
+        ixz="-1.37188349922839E-06"
+        iyy="0.000352748207548885"
+        iyz="-6.07762062122459E-07"
+        izz="0.000273235552964685" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 1 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_joint"
+    type="fixed">
+    <origin
+      xyz="0.40621 0.00019737 0.0035"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sol_taraf_mafsal">
+    <inertial>
+      <origin
+        xyz="-5.50605828794876E-05 0.00040747972820393 -0.014133838152952"
+        rpy="0 0 0" />
+      <mass
+        value="0.0071158323422291" />
+      <inertia
+        ixx="1.4565638042918E-06"
+        ixy="-1.04562672483993E-10"
+        ixz="-3.07205094397369E-10"
+        iyy="1.17641329853439E-06"
+        iyz="-2.68408326337153E-08"
+        izz="1.37770664437195E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sol_taraf_mafsal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sol_taraf_mafsal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sol_taraf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.25 -0.038"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sol_taraf_mafsal" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.524"
+      upper="0.524"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="sag_taraf_mafsal">
+    <inertial>
+      <origin
+        xyz="0.000140774162265357 0.00040747972820418 0.0141332443280681"
+        rpy="0 0 0" />
+      <mass
+        value="0.0071158323422291" />
+      <inertia
+        ixx="1.4565571780562E-06"
+        ixy="2.67336847045562E-10"
+        ixz="-7.85402561475304E-10"
+        iyy="1.17641329853439E-06"
+        iyz="2.68397049319435E-08"
+        izz="1.37771327060755E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sag_taraf_mafsal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/sag_taraf_mafsal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sag_taraf_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.25 -0.038"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sag_taraf_mafsal" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.524"
+      upper="0.524"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="suspansiyon">
+    <inertial>
+      <origin
+        xyz="-0.0150017488526062 1.11280390169277E-06 -1.73550430352793E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.132842611598407" />
+      <inertia
+        ixx="0.00216356701742164"
+        ixy="-7.40033152239907E-10"
+        ixz="-2.32809055636712E-10"
+        iyy="0.00216338910003258"
+        iyz="2.49699645575109E-06"
+        izz="2.39802588819139E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/suspansiyon.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kapsul_rover/meshes/suspansiyon.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="suspansiyon_joint"
+    type="revolute">
+    <origin
+      xyz="-0.335 0 -0.056"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="suspansiyon" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.07"
+      upper="0.07"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+  <transmission name="front_right_wheel_trans" type="SimpleTransmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="front_right_wheel_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="sag_on_teker_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="front_left_wheel_trans" type="SimpleTransmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="front_left_wheel_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="sol_on_teker_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="rear_right_wheel_trans" type="SimpleTransmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="rear_right_wheel_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="sag_arka_teker_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="rear_left_wheel_trans" type="SimpleTransmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="rear_left_wheel_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="sol_arka_teker_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+</xacro:macro>
+</robot>

@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'sag_on_teker_joint', 'sol_on_teker_joint', 'sag_arka_teker_joint', 'sol_arka_teker_joint', 'sol_taraf_joint', 'sag_taraf_joint', 'suspansiyon_joint', ]
